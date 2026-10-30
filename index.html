@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>notholt lighting design – Lichtplanung Hamburg</title>
+<meta name="description" content="Das Lichtplanungsbüro von Thomas Notholt in Hamburg, entwickelt innovative und individuelle Lichtkonzepte.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 fill=%22%23000%22/%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2212%22 fill=%22%23FFD6A0%22/%3E%3C/svg%3E">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="notholt lighting design">
+<meta property="og:description" content="Das Lichtplanungsbüro von Thomas Notholt in Hamburg, entwickelt innovative und individuelle Lichtkonzepte.">
+<meta property="og:image" content="img/Foto_29.07.20__23_30_46.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   NOTHOLT LIGHTING DESIGN · Entwurf
+   Ein Raum vor dem Einschalten. Am Ende der Seite ist das Licht an.
+   Ein Akzent: --light = Lichtfarbe (Standard 2700 K).
+   Gotham 300 / 400 / 500, Fallback Montserrat.
+   ========================================================= */
+:root{
+  --logo:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 50'%3E%3Cg fill='none' stroke='%23fff' stroke-width='5' stroke-linejoin='round'%3E%3Cpath d='M2.5 26V9.5Q2.5 2.5 9.5 2.5H22.5Q29.5 2.5 29.5 9.5V26'/%3E%3Crect x='43.5' y='2.5' width='25' height='21' rx='7'/%3E%3Crect x='159.5' y='2.5' width='26' height='21' rx='7'/%3E%3C/g%3E%3Cg fill='%23fff'%3E%3Crect x='79' y='0' width='29' height='4' rx='.8'/%3E%3Crect x='90.5' y='0' width='6' height='26' rx='.8'/%3E%3Crect x='116' y='0' width='5' height='26' rx='.8'/%3E%3Crect x='142' y='0' width='5' height='26' rx='.8'/%3E%3Crect x='116' y='11' width='31' height='4' rx='.8'/%3E%3Cpath d='M197.8 0h3.4a.8.8 0 0 1 .8.8V22h30.5q2 0 2 2v1.2a.8.8 0 0 1-.8.8H197.8a.8.8 0 0 1-.8-.8V.8a.8.8 0 0 1 .8-.8z'/%3E%3Crect x='215' y='0' width='33' height='4' rx='.8'/%3E%3Crect x='229.5' y='0' width='5' height='26' rx='.8'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fff' stroke-width='1.4' stroke-linejoin='round' stroke-linecap='butt'%3E%3Cpath d='M46.7 38.4V49.3H52.4'/%3E%3Cpath d='M57.6 38.4V49.3'/%3E%3Cpath d='M70.2 40.8A3.7 5.5 0 1 0 70.2 46.9V44.2H67'/%3E%3Cpath d='M75.7 38.4V49.3M82.6 38.4V49.3M75.7 43.9H82.6'/%3E%3Cpath d='M87.8 39.1H95.4M91.6 39.1V49.3'/%3E%3Cpath d='M99.6 38.4V49.3'/%3E%3Cpath d='M106.7 49.3V38.6L113.6 49.1V38.4'/%3E%3Cpath d='M127.2 40.8A3.7 5.5 0 1 0 127.2 46.9V44.2H124'/%3E%3Cpath d='M138.8 49.3V38.4H141.4A5 5.45 0 0 1 141.4 49.3Z'/%3E%3Cpath d='M158.4 39.1H151.8V48.6H158.4M151.8 43.9H157.6'/%3E%3Cpath d='M169.3 40.2Q168.5 38.4 165.8 38.4Q162.7 38.4 162.7 41.2Q162.7 43.6 165.9 43.9Q169.6 44.2 169.6 46.7Q169.6 49.3 166 49.3Q163 49.3 162.4 47.5'/%3E%3Cpath d='M174.6 38.4V49.3'/%3E%3Cpath d='M188.2 40.8A3.7 5.5 0 1 0 188.2 46.9V44.2H185'/%3E%3Cpath d='M193.7 49.3V38.6L200.6 49.1V38.4'/%3E%3C/g%3E%3C/svg%3E");
+  --bg:#000;--fg:#fff;
+  --dim:rgba(255,255,255,.38);
+  --mid:rgba(255,255,255,.62);
+  --line:rgba(255,255,255,.14);
+  --light:#FFD6A0;
+  --lightrgb:255,214,160;
+  --font:"Gotham","Gotham SSm","Montserrat",Helvetica,Arial,sans-serif;
+  --m:clamp(20px,4vw,80px);
+  --g:clamp(12px,1.4vw,28px);
+  --u:clamp(32px,4.2vw,84px);
+  --t-xxl:clamp(34px,5.2vw,104px);
+  --t-xl:clamp(26px,2.8vw,54px);
+  --t-l:clamp(19px,1.5vw,28px);
+  --t-b:clamp(15px,.98vw,17px);
+  --t-s:clamp(12px,.76vw,14px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font:400 var(--t-b)/1.62 var(--font);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:1.5px solid var(--light);outline-offset:4px}
+::selection{background:var(--light);color:#000}
+.row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g);padding-inline:var(--m)}
+.s1{height:var(--u)}.s2{height:calc(var(--u)*2)}.s3{height:calc(var(--u)*3)}.s4{height:calc(var(--u)*4)}
+.k{font-size:var(--t-s);color:var(--dim)}
+
+/* Logo: Original-Logo als Maske, Farbe frei */
+.logo{display:inline-block;aspect-ratio:260/50;background:currentColor;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat}
+
+/* ---------- Ladebild: Logo wird beleuchtet ---------- */
+.boot{position:fixed;inset:0;z-index:100;background:#000;display:grid;place-items:center;cursor:pointer;transition:opacity 1.6s cubic-bezier(.4,0,.2,1),visibility 1.6s}
+.boot.out{opacity:0;visibility:hidden}
+.boot .lw{width:min(62vw,560px);aspect-ratio:260/50;
+  background:radial-gradient(ellipse var(--sr,26%) 220% at var(--sx,-30%) 50%,rgba(255,255,255,.95) 0,rgba(var(--lightrgb),.7) 30%,rgba(255,255,255,var(--base,.05)) 100%);
+  -webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat}
+.boot .sk{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);font-size:var(--t-s);color:rgba(255,255,255,.18);opacity:0;animation:skf 1.5s 2s ease forwards}@keyframes skf{to{opacity:1}}
+
+/* ---------- Kopf ---------- */
+.top{position:fixed;inset:0 0 auto;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 20px) var(--m) 18px;font-size:var(--t-s);transition:background .5s,color .5s}
+.top.solid{background:rgba(0,0,0,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.top.lit{background:rgba(var(--roomrgb),.9);color:#15120f}
+.wm{display:block;height:clamp(20px,1.6vw,28px);line-height:0}
+.wm .logo{height:100%}
+.top nav{display:flex;gap:clamp(16px,2.2vw,40px)}
+.top nav a{text-decoration:none;opacity:.6;transition:opacity .3s}
+.top nav a:hover,.top nav a.on{opacity:1}
+.mb{display:none;font-size:var(--t-s)}
+@media (max-width:760px){
+  .mb{display:block}
+  .top nav{position:fixed;inset:0;z-index:-1;flex-direction:column;justify-content:center;gap:18px;padding:0 var(--m);background:#000;color:#fff;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+  .top nav a{font:300 clamp(30px,9vw,44px)/1.2 var(--font);opacity:1}
+  .top.open nav{opacity:1;visibility:visible}
+  .top.open{background:#000;color:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+
+/* ---------- Hero: bewegtes Raster, Lichtkegel 2700 K ---------- */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;background:#000}
+.cols{position:absolute;inset:0;display:flex;gap:6px;padding:0 6px}
+.col{flex:1 1 0;display:flex;flex-direction:column;gap:6px;will-change:transform}
+.col button{display:block;padding:0;cursor:pointer}
+.col img{width:100%;aspect-ratio:2/1;object-fit:cover;filter:brightness(var(--b,.45)) saturate(var(--s,.6))}
+.hero .beam{position:absolute;inset:0;z-index:1;pointer-events:none;mix-blend-mode:soft-light;opacity:0;transition:opacity .4s;
+  background:radial-gradient(circle var(--r,30vw) at var(--x,50%) var(--y,50%),rgba(var(--lightrgb),.7),rgba(var(--lightrgb),.25) 45%,transparent 72%)}
+.hero.on .beam{opacity:1}
+.hero::before{content:"";position:absolute;inset:0 0 auto;height:140px;z-index:2;background:linear-gradient(#000,transparent);pointer-events:none}
+.hero .veil{position:absolute;inset:auto 0 0;z-index:2;height:46%;background:linear-gradient(to top,#000 8%,rgba(0,0,0,.75) 45%,transparent);pointer-events:none}
+.hero .cap{position:absolute;z-index:3;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:end;gap:var(--g);padding:0 var(--m) calc(var(--u)*.8);pointer-events:none}
+.hero h1{font:300 var(--t-xl)/1.18 var(--font);letter-spacing:-.012em;max-width:22em}
+.hero .hint{font-size:var(--t-s);color:var(--dim);white-space:nowrap;text-align:right}
+.hero .hint b{display:block;font-weight:400;color:var(--fg)}
+.tag{position:fixed;z-index:30;left:0;top:0;pointer-events:none;font-size:var(--t-s);color:#000;background:var(--light);padding:6px 10px;white-space:nowrap;opacity:0;transition:opacity .2s}
+.tag.on{opacity:1}
+@media (max-width:760px){.cols{gap:4px;padding:0 4px}.col{gap:4px}.hero .hint{display:none}}
+
+/* ---------- Award ---------- */
+.aw .badge{grid-column:1/4;font-size:var(--t-s);color:var(--light);letter-spacing:.02em}
+.aw h2{grid-column:4/12;font:300 var(--t-xxl)/1.02 var(--font);letter-spacing:-.025em}
+.aw .txt{grid-column:4/9;margin-top:calc(var(--u)*.8);color:var(--mid)}
+.aw .txt p+p{margin-top:1em}
+.aw .txt a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line);display:inline-block;margin-top:1.4em;font-size:var(--t-s)}
+.aw .txt a:hover{border-color:var(--light)}
+@media (max-width:820px){.aw .badge,.aw h2,.aw .txt{grid-column:1/13}.aw h2{margin-top:12px}}
+.lit img{filter:brightness(var(--b,1))}
+.gal{align-items:start}
+.gal figure:nth-child(1){grid-column:1/13}
+.gal figure:nth-child(2){grid-column:1/7;margin-top:var(--g)}
+.gal figure:nth-child(3){grid-column:7/13;margin-top:calc(var(--g) + var(--u)*1.4)}
+figcaption{margin-top:10px;font-size:var(--t-s);color:var(--dim)}
+@media (max-width:820px){.gal figure:nth-child(n){grid-column:1/13;margin-top:var(--g)}}
+
+/* ---------- Projekte: Index ---------- */
+.pj .h{grid-column:1/13;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:calc(var(--u)*.6)}
+.pj .h h2{font:300 var(--t-xl)/1.1 var(--font)}
+.pj .intro{grid-column:1/7;color:var(--mid);margin-bottom:calc(var(--u)*.8)}
+.flt{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:var(--t-s)}
+.flt button{color:var(--dim);transition:color .3s}
+.flt button[aria-pressed="true"],.flt button:hover{color:var(--fg)}
+.idx{grid-column:1/13;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.1) var(--g)}
+.idx li.off{display:none}
+.idx button{width:100%;text-align:left;display:block}
+.idx img{width:100%;aspect-ratio:2/1;object-fit:cover;filter:brightness(.78);transition:filter .6s}
+.idx button:hover img{filter:brightness(1)}
+.idx .cap{display:grid;grid-template-columns:1fr auto;column-gap:var(--g);align-items:baseline;margin-top:14px}
+.idx .nm{font:300 var(--t-l)/1.2 var(--font);letter-spacing:-.01em}
+.idx .ct{grid-column:1;font-size:var(--t-s);color:var(--dim);margin-top:4px}
+.idx .or{grid-column:2;grid-row:1;font-size:var(--t-s);color:var(--dim);text-align:right}
+.idx .yr{grid-column:2;grid-row:2;font-size:var(--t-s);color:var(--dim);text-align:right;margin-top:4px}
+@media (max-width:820px){.idx{grid-template-columns:1fr}.pj .intro{grid-column:1/13}}
+
+/* ---------- Referenzliste ---------- */
+.rf .h{grid-column:1/13;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:calc(var(--u)*.6)}
+.rf .h h2{font:300 var(--t-xl)/1.1 var(--font)}
+.rf .h .k{text-align:right}
+.rf .cats{grid-column:1/13;border-top:1px solid var(--line)}
+.rf details{border-bottom:1px solid var(--line)}
+.rf summary{list-style:none;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g);padding:18px 0;cursor:pointer;align-items:baseline}
+.rf summary::-webkit-details-marker{display:none}
+.rf summary span{grid-column:1/9;font:300 var(--t-l)/1.2 var(--font)}
+.rf summary b{grid-column:9/12;font-weight:400;font-size:var(--t-s);color:var(--mid)}
+.rf summary i{grid-column:12/13;justify-self:end;font-style:normal;color:var(--dim);font-size:var(--t-s)}
+.rf details[open] summary i::before{content:"schließen"}
+.rf details:not([open]) summary i::before{content:"öffnen"}
+.rf ul{list-style:none;columns:2;column-gap:var(--g);padding:8px 0 36px;font-size:var(--t-b);line-height:1.85;color:rgba(255,255,255,.8)}
+.rf ul li{break-inside:avoid}
+.rf ul li em{font-style:normal;color:var(--dim)}
+.rf details.off{display:none}
+@media (max-width:820px){.rf ul{columns:1}.rf summary span{grid-column:1/8}.rf summary b{grid-column:8/12}}
+
+/* ---------- Der helle Raum: Büro, Kontakt ---------- */
+.room{--roomrgb:255,255,255;--ink:#15120f;--inkdim:rgba(21,18,15,.5);--inkline:rgba(21,18,15,.14);
+  background:#000;color:#fff;transition:background 1.6s cubic-bezier(.4,0,.2,1),color 1.6s;padding-top:calc(var(--u)*2)}
+.room.on{background:rgb(var(--roomrgb));color:var(--ink)}
+.room ::selection{background:var(--ink);color:#fff}
+.room .k{color:inherit;opacity:.5}
+.ab .line{grid-column:1/12;font:300 var(--t-xxl)/1.02 var(--font);letter-spacing:-.025em}
+.ab .lead{grid-column:1/9;margin-top:calc(var(--u)*.8);font:400 var(--t-l)/1.5 var(--font);opacity:.85}
+.ab .cct{grid-column:9/13;margin-top:calc(var(--u)*.8);font-size:var(--t-s);display:grid;gap:10px;align-content:start;justify-items:end;text-align:right}
+.ab .cct .sw{display:flex;gap:10px}
+.ab .cct button{display:flex;align-items:center;gap:8px;opacity:.55;transition:opacity .3s}
+.ab .cct button i{width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 12px 2px color-mix(in srgb,var(--c) 60%,transparent)}
+.ab .cct button[aria-pressed="true"],.ab .cct button:hover{opacity:1}
+.ab .th{grid-column:1/13;margin-top:calc(var(--u)*1.6);padding-top:calc(var(--u)*.8);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*.8) var(--g)}
+.room.on .ab .th,.room.on .ct2 .big,.room.on .foot{border-color:var(--inkline)}
+.ab .th h3{font:300 var(--t-l)/1.2 var(--font);margin:18px 0 10px}
+.ab .th p{opacity:.8;font-size:var(--t-s);line-height:1.75}
+.ab .th p+p{margin-top:.9em}
+@media (max-width:1100px){.ab .th{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.ab .th{grid-template-columns:1fr}}
+@media (max-width:820px){.ab .line,.ab .lead{grid-column:1/13}.ab .cct{grid-column:1/13;justify-items:start;text-align:left}}
+
+/* ---------- Kontakt ---------- */
+.ct2 .big{grid-column:1/13;font:300 var(--t-xxl)/1 var(--font);letter-spacing:-.025em;text-decoration:none;display:inline-block;transition:color .4s}
+.ct2 .big:hover{color:var(--light)}
+.ct2 .col{grid-column:span 3;margin-top:calc(var(--u)*1.2);font-size:var(--t-s);line-height:1.8;opacity:.8}
+.ct2 .col h4{font-weight:500;font-size:var(--t-s);margin-bottom:8px}
+.ct2 .col a{text-decoration:none}.ct2 .col a:hover{opacity:1}
+.ct2 .team{grid-column:span 6}
+.ct2 .team ul{list-style:none;columns:2;column-gap:var(--g)}
+.foot{margin-top:calc(var(--u)*2);padding:20px var(--m) calc(20px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:var(--t-s);opacity:.6}
+.foot a{text-decoration:none}
+.foot .logo{height:16px;vertical-align:middle}
+@media (max-width:820px){.ct2 .col,.ct2 .team{grid-column:1/13}}
+
+/* ---------- Projekt-Ansicht ---------- */
+.ov{position:fixed;inset:0;z-index:60;background:#000;color:#fff;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;overscroll-behavior:contain}
+.ov.on{opacity:1;visibility:visible}
+.ov .bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:20px var(--m);background:linear-gradient(#000 60%,rgba(0,0,0,0));font-size:var(--t-s)}
+.ov .bar .nx{display:flex;gap:22px;color:var(--mid)}
+.ov .bar button:hover{color:var(--fg)}
+.ov .hd{padding:calc(var(--u)*1.2) var(--m) calc(var(--u)*.8)}
+.ov h3{font:300 var(--t-xxl)/1.02 var(--font);letter-spacing:-.025em}
+.ov .meta{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g);margin-top:calc(var(--u)*.7)}
+.ov .meta .a{grid-column:1/4;font-size:var(--t-s);color:var(--dim)}
+.ov .meta dl{grid-column:4/11;display:grid;grid-template-columns:max-content 1fr;column-gap:var(--g);row-gap:6px;font-size:var(--t-s)}
+.ov .meta dt{color:var(--dim)}.ov .meta dd{color:var(--mid)}
+.ov .imgs{display:grid;gap:var(--g);padding-inline:var(--m);justify-items:center}
+.ov .imgs img{width:100%;max-width:var(--w)}
+.ov .cr{padding:var(--u) var(--m);font-size:var(--t-s);color:var(--dim)}
+@media (max-width:820px){.ov .meta .a,.ov .meta dl{grid-column:1/13}.ov .meta dl{margin-top:12px}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pv img,.ov,.room{transition:none}.lit img{filter:none!important}}
+</style>
+</head>
+<body>
+<div class="boot" id="intro" aria-hidden="true"><div class="lw"></div><span class="sk">klicken zum Überspringen</span></div>
+
+<header class="top" id="top">
+  <a href="#start" class="wm" aria-label="notholt lighting design"><span class="logo"></span></a>
+  <nav><a href="#projekte">projekte</a><a href="#referenzen">referenzliste</a><a href="#buero">büro</a><a href="#kontakt">kontakt</a></nav>
+  <button class="mb" id="mb" aria-expanded="false" aria-controls="top">menü</button>
+</header>
+
+<main>
+<section class="hero" id="start">
+  <div class="cols" id="cols" aria-label="Referenzen"></div>
+  <div class="beam" id="beam"></div>
+  <div class="veil"></div>
+  <div class="cap">
+    <h1>Das Lichtplanungsbüro von Thomas Notholt in Hamburg, entwickelt innovative und individuelle Lichtkonzepte.</h1>
+    <span class="hint"><b id="cnt"></b>Mit der Maus beleuchten</span>
+  </div>
+</section>
+<div class="tag" id="tag"></div>
+
+<div class="s4"></div>
+
+<section class="row aw" id="award">
+  <p class="badge">[d]arc awards 2021<br>Winner Best Art Bespoke</p>
+  <h2>Kunden im „Lichtschwarm“</h2>
+  <div class="txt">
+    <p>Wir sind von einer internationalen Fachjury zum Sieger in der Kategorie Art Bespoke gekürt worden! Die Preisträger wurden am 31. März 2022 im Rahmen der [d]arc night @ Fabric in London bekannt gegeben. Unser Teammitglied Almut Bagnoli hat den Preis vor Ort im Namen des Büros entgegengenommen.</p>
+    <p>Die schwebende Lichtskulptur bildet eine Sichelform aus Fiberglas-Elementen mit konischen Messing- und Weißglas-Endstücken, die den Loungebereich der Eingangshalle der Privatbank umschließt. Spaziert man den Weg außen am Gebäude entlang, eröffnet sich durch das Fenster ein herrlicher Blick auf die Lichtinstallation. Von innen erfasst der Blick der Besucher die ganze Weite der Lichtskulptur. Vom Loungebereich aus schauen die Bankkunden durch den faszinierenden Lichtschwarm direkt nach oben.</p>
+    <a href="#projekte" data-open="0">Privatbank Donner &amp; Reuschel, Hamburg</a>
+  </div>
+</section>
+<div class="s2"></div>
+<section class="row gal" id="awgal">
+  <figure class="lit"><img src="img/Foto_29.07.20__23_30_46.jpg" width="2000" height="1000" alt="Privatbank Donner & Reuschel" loading="lazy"></figure>
+  <figure class="lit"><img src="img/BAL_0550.jpg" width="2000" height="1000" alt="Privatbank Donner & Reuschel" loading="lazy"></figure>
+  <figure class="lit"><img src="img/Foto_29.07.20__23_31_15.jpg" width="2000" height="1000" alt="Privatbank Donner & Reuschel" loading="lazy"><figcaption>© Fotos: notholt lighting design (1, 3); Marcus Bredt (2)</figcaption></figure>
+</section>
+
+<div class="s4"></div>
+
+<section class="row pj" id="projekte">
+  <div class="h">
+    <h2>Projekte</h2>
+    <div class="flt" id="flt" role="group" aria-label="Kategorie"></div>
+  </div>
+  <p class="intro">Jedes Projekt ist eine neue Herausforderung! Professionelle Lichtplanung bedeutet alle Projekte mit ihren individuellen Aufgabenstellungen zu betrachten, zu analysieren, zu planen und umzusetzen. Unsere vielseitigen Erfahrungen in den unterschiedlichsten Bereichen machen dies möglich. Wir entwickeln individuelle Lösungen für Ihre Projekte, unabhängig von Größe, Funktion oder Budget.</p>
+  <ol class="idx" id="idx"></ol>
+</section>
+
+<div class="s4"></div>
+
+<section class="row rf" id="referenzen">
+  <div class="h">
+    <h2>Referenzliste</h2>
+    <p class="k" id="rfk"></p>
+  </div>
+  <div class="cats" id="cats"></div>
+</section>
+
+<div class="s4"></div>
+
+<div class="room" id="room">
+<section class="row ab" id="buero">
+  <p class="line">Wir planen unabhängig von Herstellern.</p>
+  <p class="lead">Unser Team, bestehend aus jungen, kreativen und erfahrenen Lichtplanern, erarbeitet in enger Zusammenarbeit mit Bauherren und Architekten Lichtkonzepte, deren Ziel es ist, ihrer jeweiligen Individualität gerecht zu werden. In den entsprechenden Kompetenzbereichen setzen wir uns mit den architektonischen Vorgaben und der jeweiligen Nutzung intensiv auseinander. Wir planen unabhängig von Herstellern und schaffen es somit die modernsten Lichttechnologien zu berücksichtigen. Dabei sind auch die Lichtqualität und die neusten Energiespartechniken von großer Bedeutung. Hierfür nutzen wir täglich unsere eigene Lichtwerkstatt, um die jeweils individuellen Szenarien nachzustellen und Ihnen das bestmögliche Ergebnis bieten zu können. Unser Marktwissen verschafft uns günstige Einkaufskonditionen, womit wir für jedes Budget das passende Lichtkonzept entwickeln können. Gerne begleiten wir Ihr Projekt vom Entwurf bis zur Realisierung.</p>
+  <div class="cct" id="cct">
+    <span class="k">Lichtfarbe im Raum</span>
+    <div class="sw" role="group" aria-label="Lichtfarbe"></div>
+  </div>
+  <div class="th">
+    <article><img src="img/csm_IZP-1_07_ccaff711ef.jpg" alt="" loading="lazy"><h3>Gesundheit</h3><p>Licht hat einen direkten und indirekten Einfluss auf unsere Gesundheit, unser Wohlempfinden und unsere Lebensqualität. Im direkten Wege über das Auge, steuert Licht zum Beispiel unseren Schlaf-Wach-Rhythmus, dem gesundheitlich eine zentrale Rolle zukommt. Im indirekten Wege haben Lichtfarbe, Lichtqualität, Blendfreiheit, Ambiente und Atmosphäre Einfluss auf unser Wohlempfinden.</p>
+      <p>In all unseren Projekten beziehen wir gesundheitliche Aspekte mit ein und schaffen Lösungen, die das Wohlempfinden und die Lebensqualität fördern und alle Sinne ansprechen.</p></article>
+    <article><img src="img/csm_Aqualounge-1_60bb56c743.jpg" alt="" loading="lazy"><h3>Lichtfarben</h3><p>Der sensible Umgang mit Farbe und Licht ist eine große Herausforderung für jeden Lichtplaner. Leider wird das »Einfärben« eines Raumes oder eines Gebäudes oftmals mit professioneller Lichtplanung gleichgesetzt. Gezielter Umgang mit farbigem Licht, bedeutet jedoch für uns die Einbeziehung aller technischen und biologischen Faktoren.</p>
+      <p>Die Wirkung von farbigem Licht auf unseren Organismus ist eine wesentliche und nicht zu vernachlässigende Erkenntnis. Neben dem vollen Farbspektrum, welches uns das natürliche Tageslicht bietet, können wir mit einer intelligenten Lichtregelung und einfacher Bedienbarkeit farbige Lichtszenen schaffen, die aus unserer Sicht jedoch nur als Ergänzung zur eigentlichen Beleuchtung oder als vorübergehende Installation ihre Wirkung finden.</p></article>
+    <article><img src="img/csm_Energie_7371f1e40d.jpg" alt="" loading="lazy"><h3>Energie</h3><p>In der Architektur gewinnen Nachhaltigkeits-Standards wie BREEAM, LEED und DGNB immer mehr an Bedeutung und Aufmerksamkeit und werden immer häufiger nachgefragt. Professionelle Lichtplanung beinhaltet neben energetischen Fragen auch eine Reihe weiterer wichtiger Faktoren, die berücksichtigt werden müssen. Als Planer sind wir dafür verantwortlich, die Bedürfnisse aller Projektbeteiligten zu verbinden und bestmöglich umzusetzen.</p>
+      <p>Die Thematik des Energieeffizienten Bauens ist im Bereich der Lichtplanung ein komplexes Werk aus unterschiedlichsten Bedingungen, Anforderungen und Möglichkeiten. Aktuelle Erkenntnisse und Techniken werden in die Planung einbezogen ohne dabei die atmosphärische Gestaltung und die individuellen Bedürfnisse des Nutzers außer Acht zu lassen.</p></article>
+    <article><img src="img/csm_LED_20b9bd5a6e.jpg" alt="" loading="lazy"><h3>LEDs</h3><p>LEDs (Light Emitting Diode) entwickeln sich mit rasanter Geschwindigkeit. Immer neue Leistungsklassen, höhere Effizienz, bessere Farbwiedergabe, andere Lichtspektren. Neue Unternehmen entstehen und traditionelle Hersteller steigen groß in den Markt ein. Mit diesem Neuland und der Fülle der Produkte ergeben sich erhebliche Qualitätsunterschiede. Durch kontinuierliche Schulung und Weiterbildung unserer technischen Fachkenntnisse und der Bemusterung jeder spezifizierten Leuchte sind wir Ihr verlässlicher Partner für eine kompetente Beratung.</p>
+      <p>Die wichtigsten Vorteile der LED Technik sind: Hohe Energieeffizienz, lange Lebensdauer, geringe Größe, gute Dimmbarkeit, Robustheit, geringe Wärmeerzeugung, keine Einschaltverzögerung, UV- und IR-Licht frei.</p></article>
+  </div>
+</section>
+
+<div class="s4"></div>
+
+<section class="row ct2" id="kontakt">
+  <a class="big" href="mailto:info@notholt.de">info@notholt.de</a>
+  <div class="col"><h4>notholt lighting design</h4>Dehnhaide 71<br>22081 Hamburg<br><a href="https://www.google.com/maps?daddr=Dehnhaide+71+22081+Hamburg" target="_blank" rel="noopener">Anfahrt</a></div>
+  <div class="col"><h4>Kontakt</h4><a href="tel:+494069644500">T. 0049 (0)40. 69644500</a><br>F. 0049 (0)40. 69644495<br>Inhaber: Thomas Notholt</div>
+  <div class="col team"><h4>Team</h4><ul>
+    <li><a href="mailto:tn@notholt.de">Thomas Notholt</a></li><li><a href="mailto:uw@notholt.de">Ulrike Wiegand</a></li><li><a href="mailto:ab@notholt.de">Almut Bagnoli</a></li><li><a href="mailto:lw@notholt.de">Larissa Wilhelm</a></li><li><a href="mailto:mh@notholt.de">Mara Hein</a></li><li><a href="mailto:is@notholt.de">Inken Schwedt</a></li><li><a href="mailto:tt@notholt.de">Tina Trömmel</a></li></ul></div>
+</section>
+<div class="foot"><span class="logo" aria-label="notholt lighting design"></span><span><a href="https://www.notholt.de/impressum/">impressum</a> &nbsp; <a href="https://www.notholt.de/datenschutz/">datenschutz</a> &nbsp; <a href="https://www.notholt.de/1/startseite/">en</a></span></div>
+</div>
+</main>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="ovT">
+  <div class="bar"><button id="ovX">schließen</button><div class="nx"><button id="ovP">zurück</button><span id="ovN"></span><button id="ovF">weiter</button></div></div>
+  <div class="hd"><h3 id="ovT"></h3><div class="meta"><div class="a" id="ovA"></div><dl id="ovD"></dl></div></div>
+  <div class="imgs" id="ovI"></div>
+  <div class="cr" id="ovC"></div>
+</div>
+
+<script>
+/* =========================================================
+   PROJEKTE: Texte, Daten und Bilder 1:1 von notholt.de
+   n Name, o Ort, c Kategorie, y Fertigstellung, l Leistungen,
+   bh Bauherr, ar Architektur, ia Innenarchitektur, cr Fotografie,
+   w Bildbreite, i Bilder
+   ========================================================= */
+const B='img/';
+const P=[
+ {n:'Privatbank Donner & Reuschel',o:'Hamburg',c:'Büro / Verwaltung',y:'2021',l:'Lichtplanung Tresorlounge/Bar, Damenlounge, Herrenlounge, Besprechungsräume, Vorstandsräume, Veranstaltungsräume, Eventlounge',bh:'HANSAINVEST Real Assets',ar:'Axthelm Rolvien Architekten',cr:'© Marcus Bredt (1-7); notholt lighting design (8-9)',aw:'[d]arc awards 2021: Winner Best Art Bespoke',w:1200,i:['1-2_BAL_1352.jpg','1-2_BAL_0787.jpg','1-2_BAL_0987.jpg','1-2_BAL_0912.jpg','1-2_BAL_1410.jpg','1-2_BAL_0982.jpg','Foto_29.07.20__22_59_07.jpg','Foto_29.07.20__23_30_46.jpg']},
+ {n:'Lighthouse Hotel',o:'Büsum',c:'Hotel',y:'2021',l:'Lichtplanung des Hotels',bh:'Lighthouse Hotel GmbH',ar:'Architekturwerkstatt Ladehoff und Hannemann & Krützfeldt',ia:'Cosman Interior',cr:'© Rainer Taepper',w:1200,i:['1-2_lighthouse-rainer-taepper-architekturfotografie-36.jpg','1-2_lighthouse-rainer-taepper-architekturfotografie-28.jpg','1-2_lighthouse-rainer-taepper-architekturfotografie-16.jpg','1-2_lighthouse-rainer-taepper-architekturfotografie-20.jpg']},
+ {n:'Puzzle Bar',o:'Hamburg',c:'Gastronomie',y:'2020',l:'Lichtplanung für Innenbeleuchtung',ia:'Cubik3',cr:'Nele Martensen',w:1200,i:['cubik3_puzzlebar_8233_HP.jpg','cubik3_puzzlebar_4600_2_HP.jpg']},
+ {n:'Hotel Steigenberger Treudelberg',o:'Hamburg',c:'Hotel',y:'2008, Modernisierung 2020',l:'Lichtplanung für Lobby, Konferenzräume, Wellnessbereich, Gastronomie, Aussenbeleuchtung',bh:'Verwaltungsgesellschaft Hof Treudelberg GbR c/o Casa Dienstleistungs GmbH',ar:'SWP Architekten',ia:'meierei',cr:'© Andreas Hoernisch',w:1181,i:['1-2_TREUDELBERG_GEMUETLICH_57.jpg','TREUDELBERG_GEMUETLICH_29b.jpg','1-2_TREUDELBERG_GEMUETLICH_21.jpg','1-2_TREUDELBERG_GEMUETLICH_47.jpg','1-2_TREUDELBERG_GEMUETLICH_05.jpg']},
+ {n:'Hotel Öschberghof',o:'Donaueschingen',c:'Hotel',y:'2019',l:'Lichtplanung für die Erweiterung und den Umbau des Hotels mit großem Wellness- und Gastronomiebereich, Konferenz- und Veranstaltungsbereich, sowie neuem Konzept der Hotelzimmer',bh:'Der Öschberghof GmbH',ar:'Allmann Sattler Wappner Architekten',ia:'JOI-Design',cr:'Sichtkreis - Felix Löchner',w:1200,i:['csm_x_61A5251_e4cafd8bf8.jpg','csm_x_61A5324_0407b2ea13.jpg','csm_x_61A5091_32f1928829.jpg','csm_x_61A5400_554dc6121d.jpg','csm_x_61A5066_cce5d204f2.jpg','csm_x_61A5501-2b_28550b9a1b.jpg']},
+ {n:'Hanse Merkur',o:'Hamburg',c:'Fassaden',y:'2019',l:'Lichtplanung für Empfangshalle, Fassade, Außenbereiche',bh:'HMK Immobilien',ar:'Querkopf Architekten',cr:'Andreas Kreutzer (Foto 1)',w:2048,i:['stadtvilla-haus-wedells-3hp.jpg','csm_IMG_6050hp_da5bf51631.jpg','csm_IMG_0140hp_52cee28488.jpg','csm_IMG_7750hp_170baa1a69.jpg']},
+ {n:'TORTUE Hotel',o:'Hamburg',c:'Hotel',y:'2018',l:'',w:1200,i:['csm_TORTUE_HAMBURG__JIN_GUI_Long_table_d71c1d5bc8.jpg','csm_TORTUE_HAMBURG_TORTUE_Suite__7__9a9c851e29.jpg','csm_TORTUE_HAMBURG_brasserie__2__3d7ecda236.jpg','csm_TORTUE_HAMBURG__Lobby__1__08b338c27b.jpg','csm_TORTUE_HAMBURG_bar_bleu__3__33ba951b8a.jpg','csm_TORTUE_HAMBURG__JIN_GUI_Main_Restaurant__2__358c59f26c.jpg','csm_TORTUE_HAMBURG_JIN_GUI_Mirror_chamber__1_hp_475908490a.jpg']},
+ {n:'SIDE Hotel',o:'Hamburg',c:'Hotel',y:'2018',l:'Erneuerung des Bestandskonzepts für Lobby, Konferenzräume und Gastronomie',bh:'Seaside Hotels GmbH & Co. KG',ar:'Jan Störmer Architekten',ia:'Matteo Thun & Partners',cr:'notholt Lighting Design',w:1200,i:['Hotel-Gallery-Bar-02-1140x757.jpg','Hotel-Gallery-Lobby-Lounge-01-1140x757.jpg','hotel-kontakt-col.jpg','Hotel-Gallery-Lobby-Lounge-02.jpg','Hotel-Gallery-Bar-01-1140x757.jpg','Hotel-Gallery-Tagung_XL-1140x757.jpg']},
+ {n:'Nikkei Nine',o:'Hamburg',c:'Gastronomie',y:'2016',l:'Lichtplanung für Innenbeleuchtung, Eingangsbereich, Restaurant, Bar, Lounge',bh:'Fairmont Hotel Vier Jahreszeiten',ar:'Fairmont Hotel Vier Jahreszeiten',cr:'© Guido Leifhelm',w:1200,i:['csm_notholt_lighting_design_NIKKEI_NINE_2___Guido_Leifhelm_3f00c8ceaa.jpg','csm_notholt_lighting_design_NIKKEI_NINE_6___Guido_Leifhelm_409027deb1.jpg','csm_notholt_lighting_design_NIKKEI_NINE_8___Guido_Leifhelm_d8a57d6464.jpg','csm_notholt_lighting_design_NIKKEI_NINE_7___Guido_Leifhelm_ceb6099236.jpg','csm_notholt_lighting_design_NIKKEI_NINE_1___Guido_Leifhelm_0f5d791a88.jpg','csm_notholt_lighting_design_NIKKEI_NINE_3___Guido_Leifhelm_a6da477866.jpg','csm_notholt_lighting_design_NIKKEI_NINE_4___Guido_Leifhelm_bd49dbfd7b.jpg','csm_notholt_lighting_design_NIKKEI_NINE_5___Guido_Leifhelm_3574116ed7.jpg','csm_notholt_lighting_design_NIKKEI_NINE_9___Guido_Leifhelm_ccf7fc57c0.jpg','csm_notholt_lighting_design_NIKKEI_NINE_10___Guido_Leifhelm_3d6e44094e.jpg']},
+ {n:'Joachim Herz Stiftung',o:'Hamburg',c:'Büro / Verwaltung',y:'2015',l:'Lichtplanung für Außenanlagen, Parkplätze, Fassadenbeleuchtung, Konferenzräume, Cafeteria, Auditorium, Foyer, Flure, Treppenhäuser',bh:'Joachim Herz Stiftung',ar:'Kitzmann Architekten',cr:'© Kitzmann Architekten mit Heiner Leiska, notholt lighting design',w:1200,i:['csm_Joachim_Herz_Stiftung_03_75b27ecc46.jpg','csm_Joachim_Herz_Stiftung_1_02_89b0ef1568.jpg','csm_Joachim_Herz_Stiftung_2_37419a9ae5.jpg','csm_Joachim_Herz_Stiftung_3_04_4f525b97b1.jpg','csm_Joachim_Herz_Stiftung_4_6951b8d7d4.jpg','csm_notholt_lighting_design_Joachim_Herz_Stiftung_6_740886ee83.jpg','csm_notholt_lighting_design_Joachim_Herz_Stiftung_7_de9eae0e25.jpg','csm_notholt_lighting_design_Joachim_Herz_Stiftung_8_9da4b5e9c6.jpg']},
+ {n:'MS Europa 2',o:'',c:'Schifffahrt',y:'2013',t:'Neubau',l:'Lichtplanung für Restaurants, Bars, Fitness, Spa, Pool, Aussenbereiche, Lobby, Treppenhäuser, Theater, Shops',bh:'Hapag Lloyd AG',ar:'Partner Ship Design',cr:'Hapag Lloyd AG, Nolte Media',w:1200,i:['csm_MS-Europa-2--1_08_f1c44b9a83.jpg','csm_MS-Europa-2--2_08_358ac708b2.jpg','csm_MS-Europa-2-3_29_283f938f41.jpg','csm_MS-Europa-2--6_10_92fa444904.jpg','csm_MS-Europa-2--7_08_04c3187d76.jpg','csm_MS-Europa-2-8_08_7ed5339a25.jpg','csm_MS-Europa-2--4_08_712d78947c.jpg','csm_MS-Europa-2---5_10_b6ce461eca.jpg','csm_MS-Europa-2-9_08_93e7b98b2d.jpg','csm_MS-Europa-2--10_22_e52a9d36b7.jpg','csm_MS-Europa-2--11_08_7d7a282188.jpg']},
+ {n:'Internationales Maritimes Museum',o:'Hamburg',c:'Museen',y:'2013',l:'Lichtplanung der Fassadenbeleuchtung',bh:'Peter Tamm Sen. Stiftung',ar:'Markovic Ronai Lütjen Voss Architekten',cr:'Tim Bruening',w:1200,i:['csm_Internationales-Maritimes-Museum-1_04_d6a8efea49.jpg']},
+ {n:'Mundsburg Office Tower',o:'Hamburg',c:'Büro / Verwaltung',y:'2012',l:'Lichtplanung für Foyer, öffentliche Bereiche',bh:'alstria office REIT-AG',ar:'Bollinger + Fehlig Architekten GmbH',cr:'diephotodesigner.de OHG',w:1200,i:['csm_Mundsburg_Office_Tower_1_04_b1aabe7d07.jpg']},
+ {n:'Alsterufer 36',o:'Hamburg',c:'Fassaden',y:'',l:'Lichtplanung für Fassade und Außenbereiche',cr:'Andreas Kreutzer',w:2000,i:['Hamburg_081A8811_hp.jpg']},
+ {n:'Große Elbstraße 281',o:'Hamburg',c:'Büro / Verwaltung',y:'in Bearbeitung',l:'Lichtplanung für Büroräume, Fassade, öffentliche Bereiche, Flur, Treppenhäuser',cr:'notholt',w:1200,i:['csm_IMG_1767.1x2_f2fcd4513f.jpg']},
+ {n:'Maggi Kochstudio',o:'Frankfurt',c:'Gastronomie',y:'',l:'',w:1200,i:['csm__DSC0560.1x2_364047dca2.jpg']}
+];
+
+/* Referenzliste 1:1 von notholt.de/referenzliste */
+const R={
+'Außenraum':['BASF Studienhaus | St. Johann','Block Bräu | Hamburg','Bürogebäude Schumannstr. | Berlin','Bürogebäude Vitacon | Hamburg','EDEKA Hauptverwaltung | Hamburg','Hess Natur - Flagshipstore | Butzbach','Hotel Doubletree by Hilton | Oradea','Hotel Grand Elysee | Hamburg','Hotel Sheraton | Ismayilli | in Bearbeitung','Joachim-Herz-Stiftung | Hamburg','Lindner Park-Hotel Hagenbeck | Hamburg','Lübeckertordamm | Hamburg','Mercedes Benz Arnulfstr. | München','MS Europa 2','Private Villa Baron Voght Strasse | Hamburg','Private Villa Elbchaussee | Hamburg','Private Villa Elbhöhe | Hamburg','Private Villa Gartenstrasse | Oldenburg','Private Villa Gustav-Freytag-Str. | Hamburg','Private Villa Mittelweg | Hamburg','Private Villa Rondeel | Hamburg','R-Class XL | ruhend','Steigenberger Grandhotel & Spa | Heringsdorf','Swissôtel | Odessa | ruhend','Villa Inselwall | Braunschweig','Villa C | Hamburg'],
+'Bäder / Wellness':['Freizeitbad Bambados | Bamberg','Hotel Doubletree by Hilton | Oradea','Hotel Four Points by Sheraton | Zaporozhye','Hotel Grand Elysee | Hamburg','Hotel Grand Esplanade | Berlin','Hotel Sheraton | Ismayilli | in Bearbeitung','Hotel Sheraton | Sochie | in Bearbeitung','Hotel Sheraton | Stockholm','Hotel Steigenberger | Bremen | in Bearbeitung','Hotel Steigenberger Treudelberg | Hamburg','Lindner Park-Hotel Hagenbeck | Hamburg','MS Amadea','MS Artania','MS Europa 2','Private Villa Elbchaussee | Hamburg','Private Villa Gartenstrasse | Oldenburg','Private Villa Gustav-Freytag-Str. | Hamburg','Steigenberger Grandhotel & Spa | Heringsdorf','Swissotel | Odessa | ruhend','Villa A | Hamburg','Wohnung Y | Hamburg'],
+'Ballsaal / Konferenz / Veranstaltung':['Alstria Head Office | Hamburg','AOL Konferenzräume und Empfang | Hamburg','Bacardi Germany | Hamburg','BASF Studienhaus | St. Johann','Bayer AG Direktionsräume | Leverkusen','Block Bräu | Hamburg','Boston Consulting Group | Hamburg','Brahmskontor | Hamburg','Bundesverband Gas- und Wasserwirtschaft | Berlin','Bürogebäude Garbe | Hamburg','Bürogebäude Litauen | Vilnius','Bürogebäude Schumannstr. | Berlin','EDEKA Hauptverwaltung | Hamburg','Hamburg Mannheimer Vorstandsetage | Hamburg','Hotel Dolce | München','Hotel Doubletree by Hilton | Oradea','Hotel Four Points | Moskau','Hotel Grand Elysee | Hamburg','Hotel Grand Esplanade | Berlin','Hotel Hilton Frankfurt Airport | Frankfurt','Hotel Hilton Vienna Danube | Wien','Hotel Interconti | Hamburg','Hotel Kompetenz Zentrum | Oberschleißheim | in Bearbeitung','Hotel La Strada | Kassel','Hotel Palace | Berlin','Hotel Renaissance | Prag','Hotel SAS Radisson Airport | Hamburg','Hotel Sheraton | Ismayilli | in Bearbeitung','Hotel Sheraton | Sochie | in Bearbeitung','Hotel Sheraton | Stockholm','Hotel Steigenberger | Bremen | in Bearbeitung','Hotel Steigenberger Treudelberg | Hamburg','Hotel Taschenbergpalais Kempinski | Dresden','HWWI Hamburgisches Welt Wirtschafts Institut | Hamburg','Institut für Funktionsanalyse | Hamburg','Joachim-Herz-Stiftung | Hamburg','Linder Park-Hotel Hagenbeck | Hamburg','MS Amadea','MS Europa 2','Nordevent Emporio Tower | Hamburg','PINO Pharmazeutische Präparate | Hamburg','Poletto | Hamburg','PPI im Jahreszeiten Verlag | Hamburg','Ratsweinkeller, Parlament | Hamburg','R-Class XL | ruhend','Reederei Ahrenkiel | Hamburg','Seminaris Hotel Multifunktionssaal | Lüneburg','Stadthalle Bremen AWD Dome | Bremen','Steigenberger Grandhotel & Spa | Heringsdorf','Swissotel | Odessa | ruhend','Taylor Wessing Rechtsanwälte | Frankfurt','Taylor Wessing Rechtsanwälte | Hamburg','Villa Inselwall | Braunschweig','Werbe Weischer im Elbbergcampus | Hamburg'],
+'Büro / Verwaltung':['Alstria Head Office | Hamburg','AOL Konferenzräume und Empfang | Hamburg','Axel Springer | Hamburg','Bacardi Germany | Hamburg','BASF Studienhaus | St. Johann','Bavaria Office | Hamburg','Boston Consulting Group | Hamburg','Brahmskontor | Hamburg','Bundesverband Gas- und Wasserwirtschaft | Berlin','Bürogebäude Cambium | Hamburg','Bürogebäude Garbe | Hamburg','Bürogebäude Heilbronner Str. 172 | Stuttgart','Bürogebäude Kaiser-Wilhelm-Str. | Hamburg | in Bearbeitung','Bürogebäude Litauen | Vilnius','Bürogebäude Rödingsmarkt | Hamburg','Bürogebäude Schaartor | Hamburg','Bürogebäude Schumannstr. | Berlin','Bürogebäude Überseering 8 | Hamburg | in Bearbeitung','Bürogebäude VBG | Hamburg | in Bearbeitung','Bürogebäude Vitacon | Hamburg','Conrad Hinrich Donner Bank | Hamburg','Covus | Berlin','DVAG | Marburg','EDEKA Hauptverwaltung | Hamburg','EWE Kundencenter | Oldenburg','Hamburg Mannheimer Shellhaus | Hamburg','Hamburg Mannheimer Vorstandsetage | Hamburg','Hess Natur | Butzbach','Holstenhof | Hamburg','HWWI Hamburgisches Welt Wirtschafts Institut | Hamburg','Institut für Funktionsanalyse | Hamburg','Joachim-Herz-Stiftung | Hamburg','Kreissparkasse | Syke','Landor Werbeagentur | Hamburg','Lübeckertordamm | Hamburg','Metaplan | Hamburg','Mundsburg Office Tower | Hamburg','PINO Pharmazeutische Präparate | Hamburg','PPI im Jahreszeiten Verlag | Hamburg','Reederei Ahrenkiel | Hamburg','Taylor Wessing Rechtsanwälte | Frankfurt','Taylor Wessing Rechtsanwälte | Hamburg','Tchibo Büroräume | Hamburg','Transnaval Schifffahrtsgesellschaft | Hamburg','Villa Inselwall | Braunschweig','Werbe Weischer im Elbbergcampus | Hamburg'],
+'Denkmal':['Auferstehungskirche | Grosshansdorf','Bayer AG | Leverkusen','Block Bräu | Hamburg','Brahmskontor | Hamburg','Bürogebäude Litauen | Vilnius','Hamburg Museum | Hamburg','Holstenhof | Hamburg','Hotel Taschenbergpalais Kempinski | Dresden','Internationales Maritimes Museum | Hamburg','Kaiserbahnhof | Potsdam','Landungsbrücken | Hamburg | in Bearbeitung','Millerntorwache | Hamburg | in Bearbeitung','Museum Kloster Isenhagen | Isenhagen','Nordevent Emporio Tower | Hamburg','Private Villa Baron Voght Strasse | Hamburg','Private Villa Elbchaussee | Hamburg','Private Villa Gartenstrasse | Oldenburg','Private Villa Gustav-Freytag-Str. | Hamburg','Private Villa Mittelweg | Hamburg','Private Villa Rondeel | Hamburg','Ratsweinkeller, Parlament | Hamburg','St. Jakobi Kirche | Hanstedt','Stadthalle Bremen AWD Dome | Bremen','Villa D | Litauen','Vlet Restaurant | Hamburg'],
+'Fassaden':['A La CHARM | Hamburg','Alstria Head Office | Hamburg','Bürogebäude Garbe | Hamburg','Bürogebäude Heilbronner Strasse 172 | Stuttgart','Gigayacht WP787','Hamburg Museum | Hamburg','Hotel Doubletree by Hilton | Oradea','Hotel Grand Elysée | Hamburg','Internationales Maritimes Museum | Hamburg','Joachim-Herz-Stiftung | Hamburg','Landungsbrücken | Hamburg | in Bearbeitung','Lindner Park-Hotel Hagenbeck | Hamburg','Lübeckertordamm | Hamburg','Ludwigshof | Hamburg','Millerntorwache | Hamburg | in Bearbeitung','Mühlencenter Glinde | Glinde','MS Europa 2','Neue Flora | Hamburg','Office Tower | Baku | ruhend','Privat Villa Mittelweg | Hamburg | in Bearbeitung','Private Villa Baron Voght Strasse | Hamburg','Private Villa Elbhöhe | Hamburg','Private Villa Gartenstrasse | Oldenburg','Private Villa Gustav-Freytag-Str. | Hamburg','Private Villa Mittelweg | Hamburg','Private Villa Rondeel | Hamburg','R-Class XL | ruhend','Reederei Ahrenkiel | Hamburg','Stadthalle Bremen AWD Dome | Bremen','Steigenberger Grandhotel & Spa | Heringsdorf','Swissotel | Odessa | ruhend','Villa Inselwall | Braunschweig'],
+'Gastronomie':['Airbus Deutschland Casino | Hamburg','Bayer AG Direktionsräume | Leverkusen','Better Days Projekt Bar | Hamburg','Block Bräu | Hamburg','Borromäushospital | Leer','Carls Restaurant | Hamburg','Freizeitbad Bamados | Bamberg','Gastronomie ins Grüne | Duisburg','Hotel Kompetenz Zentrum | Oberschleißheim | in Bearbeitung','Hotel Dolce Ballhausforum | München','Hotel Doubletree by Hilton | Oradea','Hotel Four Points | Moskau','Hotel Four Points | Zaporozhye','Hotel Grand Elysée | Hamburg','Hotel Grand Esplanade | Berlin','Hotel Hilton Frankfurt Airport | Frankfurt','Hotel Hilton Vienna Danube | Wien','Hotel Interconti | Hamburg','Hotel Palace | Berlin','Hotel Renaissance | Prag','Hotel SAS Radisson Airport | Hamburg','Hotel Sheraton | Ismayilli | in Bearbeitung','Hotel Sheraton | Sochie | in Bearbeitung','Hotel Sheraton | Stockholm','Hotel Steigenberger | Bremen | in Bearbeitung','Hotel Steigenberger Treudelberg | Hamburg','Kreiskrankenhaus | Leer','Lindner Park-Hotel Hagenbeck | Hamburg','[m]eatery bar + restaurant Gewandhaus Hotel Dresden | Dresden','MS Amadea','MS Artania','MS Europa 2','Nat Bio | Hamburg','Nikkei Nine | Hamburg','Niederegger | Lübeck','Nordevent Emporio-Tower | Hamburg','Oak Bar | Dresden','Poletto | Hamburg','Ratsweinkeller, Parlament | Hamburg','Steigenberger Grandhotel & Spa | Heringsdorf','Swissotel | Odessa | ruhend','Vapiano Freestander | Fürth','Vapiano Restaurants | u. A. Berlin, Shanghai, Manchester','Vlet Restaurant | Hamburg','Vlet Restaurant an der Alster | Hamburg | in Bearbeitung','Weser Stadion | Bremen'],
+'Gesundheit / Soziales':['Borromäushospital | Leer','Freizeitbad Bamados | Bamberg','Gemeindezentrum Lindenstraße | Bargteheide | in Bearbeitung','Interdisziplinäres Zentrum für Palliativmedizin | Uniklinik Düsseldorf','Kreiskrankenhaus | Leer','Mendelssohn KITA | Hamburg','NordseePflege | Bremerhaven | in Bearbeitung','Zahnarztpraxis Hansastr. | Hamburg','Zahnarztpraxis Jessen Ludolph Remberg | Hamburg','Zahnarztpraxis Koch | Wedemark'],
+'Hotel':['Hotel Dolce | München','Hotel Doubletree by Hilton | Oradea','Hotel Four Points | Moskau','Hotel Four Points | Zaporozhye','Hotel Grand Elysee | Hamburg','Hotel Grand Esplanade | Berlin','Hotel Hilton Frankfurt Airport | Frankfurt','Hotel Hilton Vienna Danube | Wien','Hotel Interconti | Hamburg','Hotel Kompetenz Zentrum | Oberschleißheim','Hotel La Strada | Kassel','Hotel Neptun Spabereich | Warnemünde | in Bearbeitung','Hotel Palace | Berlin','Hotel Renaissance | Prag','Hotel Radisson SAS Airport | Hamburg','Hotel Sheraton | Ismayilli | ruhend','Hotel Sheraton | Sochie | in Bearbeitung','Hotel Sheraton | Stockholm','Hotel Steigenberger | Bremen | in Bearbeitung','Hotel Steigenberger Treudelberg | Hamburg','Hotel Taschenbergpalais Kempinski | Dresden','Lindner Park-Hotel Hagenbeck | Hamburg','MS Artania','MS Europa 2','Seminaris Hotel Multifunktionssaal | Lüneburg','Steigenberger Grandhotel & Spa | Heringsdorf','Swissotel | Odessa | ruhend'],
+'Lichtkunst':['Aqualounge Containerinstallation | Hamburg','Axel Springer | Hamburg','Bürogebäude Garbe | Hamburg','Grafitektur - Architektur Sommer 2009 | Hamburg','Mühlenbergcenter Glinde | Glinde','Reederei Ahrenkiel | Hamburg','Weser Stadion | Bremen'],
+'Museen':['Hamburg Museum | Hamburg','Internationales Maritimes Museum | Hamburg','Museum Kloster Isenhagen | Isenhagen'],
+'Schifffahrt':['Gigayacht WP787','MS Amadea','MS Artania','MS Europa 2','R-Class XL | ruhend','Regent Seven Seas Explorer'],
+'Verkauf':['Bernd Berger | Viventy | München, Düsseldorf, Eschborn','CAP Vergnügungspassage | Kiel','Eva Schwarz Moden | Essen','Heinemann | Fjordline DFS','Hess Natur Flagshipstore | Butzbach','Klange Schmuck | Damme','Mercedes Benz Arnulfstr. | München','Mercedes Benz Ingolstädter Str. | München','Mühlencenter Glinde | Glinde','Mundsburg Center | Hamburg | in Bearbeitung','Niederegger | Lübeck'],
+'Wohnen':['Private Villa Isestraße | Hamburg | in Bearbeitung','Private Villa Mittelweg | Hamburg | in Bearbeitung','Private Villa Baron Voght Strasse | Hamburg','Private Villa Elbchaussee | Hamburg','Private Villa Elbhöhe | Hamburg','Private Villa Gartenstrasse | Oldenburg','Private Villa Gustav-Freytag-Str. | Hamburg','Private Villa Langenzug | Hamburg','Private Villa Mittelweg | Hamburg','Private Villa Parkallee | Hamburg','Private Villa Rondeel | Hamburg','Villa A | Hamburg','Villa B | Hamburg','Villa C | Hamburg','Villa D | Litauen','Wohnhaus K | Wedemark | in Bearbeitung','Wohnhaus Mittelweg 169 | Hamburg','Wohnhaus Oktaviostraße | Hamburg | in Bearbeitung','Wohnhaus Starnberger See | in Bearbeitung','Wohnung Y | Hamburg','Wohnung Z | Hamburg']
+};
+
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const pad=n=>String(n).padStart(2,'0');
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+/* ---------- Lichtfarbe: Kelvin zu RGB (Tanner Helland), Standard 2700 K ---------- */
+function kelvin(k){const t=k/100;let r,g,b;if(t<=66){r=255;g=99.47*Math.log(t)-161.12;b=t<=19?0:138.52*Math.log(t-10)-305.04}else{r=329.7*Math.pow(t-60,-.1332);g=288.12*Math.pow(t-60,-.0755);b=255}
+  const c=x=>Math.max(0,Math.min(255,Math.round(x)));return [c(r),c(g),c(b)]}
+function setLight(k){const [r,g,b]=kelvin(k);document.documentElement.style.setProperty('--lightrgb',r+','+g+','+b);document.documentElement.style.setProperty('--light','rgb('+r+','+g+','+b+')');
+  /* Raumfarbe: Weiß, leicht in der Lichtfarbe getönt */
+  const mix=(a,w)=>Math.round(a*.14+255*.86);document.getElementById('room').style.setProperty('--roomrgb',mix(r)+','+mix(g)+','+mix(b));
+  document.querySelectorAll('#cct button').forEach(x=>x.setAttribute('aria-pressed',+x.dataset.k===k))}
+
+/* ---------- Ladebild ---------- */
+(()=>{const it=document.getElementById('intro'),lw=it.querySelector('.lw');document.body.style.overflow='hidden';
+  const done=()=>{if(it.classList.contains('out'))return;it.classList.add('out');document.body.style.overflow=''};
+  it.onclick=done;let seen=false;try{seen=!!sessionStorage.getItem('nl-intro');sessionStorage.setItem('nl-intro','1')}catch(e){}
+  if(rm||seen){lw.style.setProperty('--base',1);setTimeout(done,rm?300:600);return}
+  const T0=performance.now(),E=x=>-(Math.cos(Math.PI*x)-1)/2,c=(t,a,d)=>Math.min(1,Math.max(0,(t-a)/d));
+  const step=n=>{const t=(n-T0)/1000;
+    lw.style.setProperty('--sx',(-30+160*E(c(t,.5,3.0)))+'%');            /* Lichtkegel gleitet über das Logo */
+    lw.style.setProperty('--base',(.05+.95*E(c(t,2.8,1.6))).toFixed(3));  /* Logo wird vollständig hell */
+    if(t<5.0)requestAnimationFrame(step);else done()};requestAnimationFrame(step)})();
+
+/* ---------- Menü mobil ---------- */
+(()=>{const tp=document.getElementById('top'),mb=document.getElementById('mb');
+  mb.onclick=()=>{const o=tp.classList.toggle('open');mb.textContent=o?'schließen':'menü';mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+  tp.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{if(tp.classList.contains('open'))mb.click()}))})();
+
+/* ---------- Hero: bewegtes Raster aller Referenzen ---------- */
+const cols=document.getElementById('cols'),tag=document.getElementById('tag'),hero=document.getElementById('start'),beam=document.getElementById('beam');
+const ALL=[];P.forEach((p,k)=>p.i.forEach(s=>ALL.push([s,k])));
+for(let i=ALL.length-1;i>0;i--){const j=(i*7919)%(i+1);[ALL[i],ALL[j]]=[ALL[j],ALL[i]]}
+document.getElementById('cnt').textContent=P.length+' Projekte, '+ALL.length+' Bilder';
+const NC=innerWidth<760?2:innerWidth<1200?4:innerWidth<1900?5:6,colEls=[],tiles=[];
+for(let c=0;c<NC;c++){const col=document.createElement('div');col.className='col';const set=ALL.filter((_,i)=>i%NC===c);
+  [...set,...set].forEach(([s,k])=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',P[k].n);const im=new Image();im.src=B+s;im.alt='';im.decoding='async';b.append(im);
+    b.onclick=()=>openP(k);b.onmouseenter=()=>{tag.textContent=P[k].n+(P[k].o?', '+P[k].o:'');tag.classList.add('on')};b.onmouseleave=()=>tag.classList.remove('on');col.append(b);tiles.push({im,el:b,lit:0,pulse:0})});
+  cols.append(col);colEls.push({el:col,off:Math.random()*400,v:(c%2?-1:1)*(.18+.06*(c%3))})}
+let mx=-9999,my=-9999,ml=0;
+hero.addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;ml=1;hero.classList.add('on');tag.style.transform='translate('+(e.clientX+16)+'px,'+(e.clientY+16)+'px)';
+  beam.style.setProperty('--x',e.clientX+'px');beam.style.setProperty('--y',(e.clientY-hero.getBoundingClientRect().top)+'px')});
+hero.addEventListener('pointerleave',()=>{ml=0;hero.classList.remove('on');tag.classList.remove('on')});
+/* Lichtszene: einzelne Bilder gehen nacheinander an und wieder aus */
+setInterval(()=>{if(rm)return;const vis=tiles.filter(t=>{const r=t.el.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight});const t=vis[Math.floor(Math.random()*vis.length)];if(t)t.pulse=1},700);
+
+/* ---------- Projekte ---------- */
+const idx=document.getElementById('idx'),flt=document.getElementById('flt');
+P.forEach((p,k)=>{const li=document.createElement('li');li.dataset.c=p.c;
+  li.innerHTML='<button type="button"><img loading="lazy" alt="" src="'+B+p.i[0]+'" width="1200" height="600"><span class="cap"><span class="nm">'+esc(p.n)+'</span><span class="or">'+esc(p.o||'')+'</span><span class="ct">'+esc(p.c)+'</span><span class="yr">'+esc((p.y||'').split(',')[0])+'</span></span></button>';
+  li.querySelector('button').onclick=()=>openP(k);idx.append(li)});
+
+/* Referenzliste: eine Kategorie pro Zeile, aufklappbar */
+const cats=document.getElementById('cats');let total=0;
+Object.entries(R).forEach(([c,list])=>{const l=[...new Set(list)];total+=l.length;const d=document.createElement('details');d.dataset.c=c;
+  d.innerHTML='<summary><span>'+esc(c)+'</span><b>'+l.length+' Projekte</b><i></i></summary><ul>'+l.map(x=>{const parts=x.split(' | ');const st=parts.filter(s=>/in Bearbeitung|ruhend/.test(s));const rest=parts.filter(s=>!/in Bearbeitung|ruhend/.test(s));return '<li>'+esc(rest.join(' | '))+(st.length?' <em>'+esc(st.join(', '))+'</em>':'')+'</li>'}).join('')+'</ul>';
+  cats.append(d)});
+document.getElementById('rfk').textContent=total+' Projekte in '+Object.keys(R).length+' Bereichen';
+
+/* Filter: wirkt auf Projekte und Referenzliste gemeinsam */
+const FC=['Alle',...Object.keys(R)];
+FC.forEach((c,i)=>{const b=document.createElement('button');b.textContent=c;b.setAttribute('aria-pressed',i===0);
+  b.onclick=()=>{flt.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    idx.querySelectorAll('li').forEach(li=>li.classList.toggle('off',c!=='Alle'&&li.dataset.c!==c));
+    cats.querySelectorAll('details').forEach(d=>{const on=c==='Alle'||d.dataset.c===c;d.classList.toggle('off',!on);d.open=c!=='Alle'&&on})};
+  flt.append(b)});
+
+/* ---------- Projekt-Ansicht ---------- */
+const ov=document.getElementById('ov');let curP=0,lastFocus=null;
+function openP(k){curP=(k+P.length)%P.length;const p=P[curP];
+  document.getElementById('ovT').textContent=p.n;document.getElementById('ovA').innerHTML=esc(p.c)+(p.o?'<br>'+esc(p.o):'')+(p.aw?'<br><br><span style="color:var(--light)">'+esc(p.aw)+'</span>':'');
+  const rows=[['Typ',p.t],['Leistungen',p.l],['Fertigstellung',p.y],['Bauherr',p.bh],['Architektur',p.ar],['Innenarchitektur',p.ia],['Fotografie',p.cr]].filter(r=>r[1]);
+  document.getElementById('ovD').innerHTML=rows.map(r=>'<dt>'+r[0]+'</dt><dd>'+esc(r[1])+'</dd>').join('');
+  document.getElementById('ovN').textContent=pad(curP+1)+' / '+pad(P.length);document.getElementById('ovC').textContent=p.cr?'© Fotos: '+p.cr.replace(/^© ?/,''):'';
+  const box=document.getElementById('ovI');box.innerHTML='';box.style.setProperty('--w',p.w+'px');
+  p.i.forEach((s,j)=>{const im=new Image();im.src=B+s;im.alt=p.n;im.loading=j<2?'eager':'lazy';box.append(im)});
+  if(!ov.classList.contains('on')){lastFocus=document.activeElement;ov.classList.add('on');document.body.style.overflow='hidden'}ov.scrollTop=0;document.getElementById('ovX').focus()}
+function closeP(){ov.classList.remove('on');document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+document.getElementById('ovX').onclick=closeP;document.getElementById('ovP').onclick=()=>openP(curP-1);document.getElementById('ovF').onclick=()=>openP(curP+1);
+document.querySelector('[data-open]').onclick=e=>{e.preventDefault();openP(+e.currentTarget.dataset.open)};
+addEventListener('keydown',e=>{if(!ov.classList.contains('on'))return;if(e.key==='Escape')closeP();if(e.key==='ArrowRight')openP(curP+1);if(e.key==='ArrowLeft')openP(curP-1)});
+
+/* ---------- Lichtfarbe im Raum: drei Stufen, Standard nach Tageszeit ---------- */
+(()=>{const sw=document.querySelector('#cct .sw');[2700,3500,5000].forEach(k=>{const b=document.createElement('button');b.type='button';b.dataset.k=k;const [r,g,bb]=kelvin(k);b.style.setProperty('--c','rgb('+r+','+g+','+bb+')');b.innerHTML='<i></i>'+k+' K';b.onclick=()=>setLight(k);sw.append(b)});
+  const h=new Date().getHours();setLight(h>=8&&h<18?3500:2700)})();
+
+/* ---------- Kopf, Licht beim Scrollen, Raum ---------- */
+const top_=document.getElementById('top'),room=document.getElementById('room'),lits=[...document.querySelectorAll('.lit img')],links=[...document.querySelectorAll('.top nav a')];
+const secs=['projekte','referenzen','buero','kontakt'].map(id=>document.getElementById(id));
+function frame(){
+  const h=innerHeight,y=scrollY;top_.classList.toggle('solid',y>40);
+  /* Raster bewegen und beleuchten */
+  if(y<h*1.2){colEls.forEach(c=>{if(!rm)c.off+=c.v;const half=c.el.scrollHeight/2;if(half){c.off=((c.off%half)+half)%half;c.el.style.transform='translate3d(0,'+(-c.off)+'px,0)'}});
+    const R=Math.max(innerWidth,h)*.3;tiles.forEach(t=>{const r=t.el.getBoundingClientRect();if(r.bottom<0||r.top>h)return;
+      const cx=r.left+r.width/2,cy=r.top+r.height/2,d=Math.hypot(cx-mx,cy-my),near=ml?Math.max(0,1-d/R):0;
+      t.pulse*=.985;const target=Math.max(near,t.pulse);t.lit+=(target-t.lit)*.12;
+      t.im.style.setProperty('--b',(.45+.55*t.lit).toFixed(3));t.im.style.setProperty('--s',(.55+.45*t.lit).toFixed(3))})}
+  /* Bilder gehen an, wenn man hinkommt */
+  if(!rm)lits.forEach(im=>{const b=im.getBoundingClientRect();if(b.bottom<0||b.top>h)return;const p=Math.min(1,Math.max(0,(h-b.top)/(h*.65)));im.style.setProperty('--b',(.08+.92*Math.pow(p,1.4)).toFixed(3))});
+  /* Der Raum wird eingeschaltet, Kopfzeile folgt */
+  const rt=room.getBoundingClientRect().top;room.classList.toggle('on',rt<h*.55);top_.classList.toggle('lit',rt<60&&room.classList.contains('on'));
+  /* aktive Navigation */
+  let on=-1;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<h*.4)on=i});links.forEach((a,i)=>a.classList.toggle('on',i===on));
+  requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
